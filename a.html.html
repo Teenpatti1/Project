@@ -1,0 +1,115 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Code Snippet Library</title> 
+  <link rel="stylesheet" href="style.css"> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>Beautiful Code Snippet Library</h1> 
+   <p>Explore and Copy HTML, CSS, and JavaScript Code Easily!</p> 
+  </header> 
+  <main> 
+   <div class="card"> 
+    <h2>HTML Project</h2> 
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+      </pre> <button class="copy-btn" data-code="<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>">Copy Code</button> 
+   </div> 
+   <div class="card"> 
+    <h2>CSS Example</h2> 
+    <pre><code>body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}</code>
+      </pre> <button class="copy-btn" data-code="body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}">Copy Code</button> 
+   </div> 
+   <div class="card"> 
+    <h2>JavaScript Example</h2> 
+    <pre><code>document.querySelector
+    ('h1').style.color = 'red';</code>
+      </pre> <button class="copy-btn" data-code="document.querySelector('h1').style.color = 'red';"> Copy Code</button> 
+   </div> <button>Execute</button> 
+  </main> 
+  <script src="script.js"></script> 
+ </body>
+</html><style>body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+  padding: 1em;
+  width: 300px;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}</style><script>document.querySelectorAll('.copy-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const codeToCopy = button.getAttribute('data-code');
+    navigator.clipboard.writeText(codeToCopy).then(() => {
+      alert('Code copied to clipboard!');
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+    });
+  });
+});</script>
